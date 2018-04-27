@@ -1,0 +1,13 @@
+.root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root img {
+  width: 200px;
+  position: absolute;
+  height: auto;
+  z-index: 2;
+}

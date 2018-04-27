@@ -5,3 +5,7 @@ declare module '*.css' {
   const styles: any;
   export = styles;
 }
+
+declare module '*.png';
+
+declare module '*.webm';

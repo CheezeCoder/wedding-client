@@ -29,7 +29,8 @@ module.exports = {
     // (jsnext:main directs not usually distributable es6 format, but es6 sources)
     mainFields: ['module', 'browser', 'main'],
     alias: {
-      'app': path.resolve(__dirname, 'src/app/')
+      app: path.resolve(__dirname, 'src/app/'),
+      assets: path.resolve(__dirname, 'src/assets/')
     }
   },
   module: {
@@ -44,6 +45,7 @@ module.exports = {
       // css
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -74,10 +76,15 @@ module.exports = {
           ]
         })
       },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: ['style-loader', 'css-loader']
+      },
       // static assets
       { test: /\.html$/, use: 'html-loader' },
-      { test: /\.png$/, use: 'url-loader?limit=10000' },
-      { test: /\.jpg$/, use: 'file-loader' }
+      { test: /\.(png|jpg)$/, use: 'url-loader?limit=10000' },
+      { test: /\.webm$/, use: 'file-loader' }
     ]
   },
   optimization: {

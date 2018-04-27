@@ -1,0 +1,8 @@
+.root {
+  width: 100%;
+  overflow: hidden;
+  background: url(/assets/images/us.jpg) no-repeat 40% center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
