@@ -11,7 +11,6 @@ Client side wedding page for our up and coming wedding in September 2018.
 - [x] [Mobx React](https://github.com/mobxjs/mobx-react)
 - [x] [Mobx React Router](https://github.com/alisd23/mobx-react-router/)
 - [x] [Mobx React Devtools](https://github.com/mobxjs/mobx-react-devtools)
-- [x] [TodoMVC example](http://todomvc.com)
 
 ### Build tools
 
