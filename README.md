@@ -1,14 +1,8 @@
-# Frontend Boilerplate with React, MobX & TypeScript
+# Front End For Wedding site
 
-A bare minimum react-mobx-webpack-typescript boilerplate with TodoMVC example.
+Client side wedding page for our up and coming wedding in September 2018.  
 
-Note that this project does not include **Server-Side Rendering**,  **Testing Frameworks** and other stuffs that makes the package unnecessarily complicated.
-
-Ideal for creating React apps from the scratch.
-
-See also: [react-redux-typescript-boilerplate](https://github.com/rokoroku/react-redux-typescript-boilerplate)
-
-## Contains
+## Built using 
 
 - [x] [Typescript](https://www.typescriptlang.org/) 2.7
 - [x] [React](https://facebook.github.io/react/) 16
@@ -51,12 +45,3 @@ $ npm start
 $ npm run build
 ```
 
-## Code Format
-
-```
-$ npm run prettier
-```
-
-# License
-
-MIT
