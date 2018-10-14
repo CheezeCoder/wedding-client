@@ -2,17 +2,17 @@ import * as React from 'react';
 import { HeroBanner } from './HeroBanner';
 import { Page } from 'app/containers/Page';
 import { Footer } from 'app/shared/Footer';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer /*toast*/ } from 'react-toastify';
 import * as Style from './style.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-const Msg = ({ closeToast = null }) => (
-  <div className={Style.customtoast}>
-    <Link className={Style.newslink} to="./news">
-      Important new information! >> Click here!{' '}
-    </Link>
-  </div>
-);
+// const Msg = ({ closeToast = null }) => (
+//   <div className={Style.customtoast}>
+//     <Link className={Style.newslink} to="./news">
+//       Important new information! >> Click here!{' '}
+//     </Link>
+//   </div>
+// );
 
 export class Home extends React.Component {
   timeout;
@@ -21,12 +21,12 @@ export class Home extends React.Component {
     // this.timeout = setTimeout(() => {
     //   this.reopenToast();
     // }, 8000);
-    toast(<Msg />, {
-      type: 'error',
-      position: toast.POSITION.TOP_CENTER,
-      className: Style.toastinfo,
-      autoClose: false
-    });
+    // toast(<Msg />, {
+    //   type: 'error',
+    //   position: toast.POSITION.TOP_CENTER,
+    //   className: Style.toastinfo,
+    //   autoClose: false
+    // });
   }
 
   componentWillUnmount() {
