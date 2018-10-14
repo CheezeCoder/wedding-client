@@ -3,16 +3,20 @@
     "sourceMap": true,
     "target": "es5",
     "jsx": "react",
-    "module": "es6",
+    // "module": "es6",
+    "module": "commonjs", // LEARN MORE ABOUT THIS
+    "allowSyntheticDefaultImports": true, // LEARN MORE ABOUT THIS
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "declaration": false,
     "noImplicitAny": false,
     "noImplicitReturns": false,
+    "keyofStringsOnly": true,
     "noUnusedLocals": true,
     "removeComments": true,
     "strictNullChecks": false,
+    "esModuleInterop": true, // LEARN MORE ABOUT THIS
     "outDir": "build",
     "lib": ["es6", "es7", "dom"],
     "baseUrl": "src",

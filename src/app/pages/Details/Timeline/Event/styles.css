@@ -1,0 +1,61 @@
+.root h2 {
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    margin-top: 2em;
+    display: flex;
+    width: 100%;
+  }
+
+  .root.alternater {
+    margin-top: 10em;
+  }
+
+  .eventblock {
+    flex: 1;
+  }
+
+  .eventblock.imageblock img {
+    width: 400px;
+    height: auto;
+  }
+
+  .imageblock {
+    flex: 1;
+  }
+
+  .imageblock {
+    text-align: right;
+    margin-right: 1em;
+  }
+
+  .infoblock {
+    display: inline-block;
+    flex: 1;
+    flex-basis: 0;
+    margin-left: 1em;
+    text-align: justify;
+  }
+
+  .infoblock p {
+    width: 400px;
+  }
+
+  .alternater .imageblock {
+    order: 2;
+    text-align: left;
+    margin: 0 0 0 1em;
+  }
+
+  .alternater .infoblock {
+    order: 1;
+    margin: 0 1em 0 0;
+  }
+
+  .alternater .innerinfo {
+    float: right;
+  }
+}

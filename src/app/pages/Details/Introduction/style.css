@@ -1,0 +1,10 @@
+.root {
+  padding: 1em;
+  letter-spacing: 0.5px;
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    text-align: justify;
+  }
+}

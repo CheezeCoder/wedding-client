@@ -1,0 +1,21 @@
+.root {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 6em;
+  border-color: #00999969;
+  border-width: 1px;
+  margin: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  color: #22b8b8;
+}
+
+.root::placeholder {
+  color: rgb(206, 206, 206);
+  text-align: center;
+}
+
+.root:focus {
+  outline: none;
+}

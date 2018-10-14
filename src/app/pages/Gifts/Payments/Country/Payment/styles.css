@@ -1,0 +1,24 @@
+.detail {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.type {
+  color: #009999;
+}
+
+@media only screen and (min-width: 992px) {
+  .payment {
+    display: block;
+  }
+
+  .payment .detail {
+    margin-right: 1em;
+  }
+
+  .payment .detail,
+  .payment .type {
+    margin-top: 2em;
+    display: inline-block;
+  }
+}

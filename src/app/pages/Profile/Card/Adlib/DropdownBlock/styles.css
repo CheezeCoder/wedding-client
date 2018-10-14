@@ -1,0 +1,25 @@
+.root {
+  border: 1px solid #009999;
+  display: inline-flex;
+  align-items: center;
+  width: 5em;
+  height: 18px;
+  padding-left: 0.5em;
+  margin: 0 1em;
+}
+
+.root select {
+  outline: none;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #8a8a8a;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  width: 100%;
+  background-color: white;
+}
+
+.root.unanswered {
+  border: 2px solid red;
+}

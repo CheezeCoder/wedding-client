@@ -9,7 +9,25 @@ var outPath = path.join(__dirname, './dist');
 // plugins
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var WebpackCleanupPlugin = require('webpack-cleanup-plugin');
+
+var developmentLoader = [
+  { loader: 'babel-loader' },
+  {
+    loader: 'awesome-typescript-loader',
+    options: {
+      babelrc: false,
+      plugins: ['react-hot-loader/babel']
+    }
+  }
+];
+
+var productionLoader = [
+  {
+    loader: 'awesome-typescript-loader'
+  }
+];
 
 module.exports = {
   context: sourcePath,
@@ -20,14 +38,14 @@ module.exports = {
     path: outPath,
     filename: 'bundle.js',
     chunkFilename: '[chunkhash].js',
-    publicPath: '/'
+    publicPath: isProduction ? '/' : '/'
   },
   target: 'web',
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
     // Fix webpack's default behavior to not load packages with jsnext:main module
     // (jsnext:main directs not usually distributable es6 format, but es6 sources)
-    mainFields: ['module', 'browser', 'main'],
+    // mainFields: ['module', 'browser', 'main'],
     alias: {
       app: path.resolve(__dirname, 'src/app/'),
       assets: path.resolve(__dirname, 'src/assets/')
@@ -38,10 +56,20 @@ module.exports = {
       // .ts, .tsx
       {
         test: /\.tsx?$/,
-        use: isProduction
-          ? 'ts-loader'
-          : ['babel-loader?plugins=react-hot-loader/babel', 'ts-loader']
+        exclude: /node_modules/,
+        use: isProduction ? productionLoader : developmentLoader
+        // use: [
+        //   { loader: 'babel-loader' },
+        //   {
+        //     loader: 'awesome-typescript-loader',
+        //     options: {
+        //       babelrc: false,
+        //       plugins: ['react-hot-loader/babel']
+        //     }
+        //   }
+        // ]
       },
+
       // css
       {
         test: /\.css$/,
@@ -83,7 +111,7 @@ module.exports = {
       },
       // static assets
       { test: /\.html$/, use: 'html-loader' },
-      { test: /\.(png|jpg)$/, use: 'url-loader?limit=10000' },
+      { test: /\.(png|jpg|gif)$/, use: 'url-loader?limit=10000' },
       { test: /\.webm$/, use: 'file-loader' }
     ]
   },
@@ -114,6 +142,9 @@ module.exports = {
       template: 'assets/index.html'
     })
   ],
+  // externals: {
+  //   firebase: 'firebase'
+  // },
   devServer: {
     contentBase: sourcePath,
     hot: true,
@@ -123,11 +154,11 @@ module.exports = {
     },
     stats: 'minimal'
   },
-  devtool: 'cheap-module-eval-source-map',
-  node: {
-    // workaround for webpack-dev-server issue
-    // https://github.com/webpack/webpack-dev-server/issues/60#issuecomment-103411179
-    fs: 'empty',
-    net: 'empty'
-  }
+  devtool: 'cheap-module-eval-source-map'
+  // node: {
+  //   // workaround for webpack-dev-server issue
+  //   // https://github.com/webpack/webpack-dev-server/issues/60#issuecomment-103411179
+  //   fs: 'empty',
+  //   net: 'empty'
+  // }
 };

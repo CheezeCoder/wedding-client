@@ -1,0 +1,13 @@
+.root {
+  border: 1px solid #009999;
+  background: none;
+  outline: none;
+  padding: 1em;
+  color: #009999;
+  margin-left: 5px;
+}
+
+.root:active {
+  background: #009999;
+  color: white;
+}

@@ -1,0 +1,11 @@
+.root {
+  margin-top: 1em;
+}
+
+.root h4 {
+  display: inline;
+}
+
+.root input {
+  margin-left: 1em;
+}

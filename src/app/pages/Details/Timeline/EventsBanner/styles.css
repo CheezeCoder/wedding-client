@@ -1,0 +1,17 @@
+.icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon::after {
+  content: '';
+  height: 75%;
+  position: absolute;
+  border-left: 2px solid #009999;
+  left: 50%;
+  z-index: -99;
+}

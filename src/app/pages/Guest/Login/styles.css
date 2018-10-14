@@ -1,0 +1,54 @@
+:root {
+  --login-white: rgb(224, 224, 224);
+}
+
+.login {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.login li {
+  margin-top: 1em;
+}
+
+.login li input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  background: inherit;
+  caret-color: snow;
+  color: rgb(224, 224, 224) !important;
+  padding-left: 1em;
+  font: 400 13.3333px Arial;
+  width: 15em;
+}
+
+.login li input::-webkit-input-placeholder {
+  color: rgb(67, 122, 122) !important;
+}
+
+.login li button {
+  margin-top: 1em;
+  width: 15em;
+  background-color: rgba(206, 206, 206, 0.37);
+  border: 1px solid rgba(206, 206, 206, 0.37);
+  color: var(--login-white);
+}
+
+.title {
+  text-align: center;
+  color: var(--login-white);
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    height: 100%;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+}

@@ -1,0 +1,16 @@
+.root {
+  padding: 1em;
+}
+
+.root h1,
+.root h2,
+.root h3,
+.root h4 {
+  font-family: 'PT Sans', sans-serif;
+}
+
+@media only screen and (min-width: 992px) {
+  .root {
+    width: 100%;
+  }
+}

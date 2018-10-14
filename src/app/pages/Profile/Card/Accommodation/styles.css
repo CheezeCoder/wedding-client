@@ -1,0 +1,27 @@
+.root {
+  border: 1px solid red;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.root.filled {
+  border: none;
+  padding: 0;
+}
+
+.root h5 {
+  font-style: italic;
+}
+
+.root span {
+  font-weight: bold;
+}
+
+.root input {
+  width: 100%;
+  padding: 0;
+}
+
+.root input:focus {
+  outline: none;
+}

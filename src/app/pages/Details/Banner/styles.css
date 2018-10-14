@@ -1,0 +1,29 @@
+.title {
+  margin-top: 1em;
+  height: 100px;
+  width: auto;
+  background-image: url(/assets/images/artistic-banner.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.root .title h2 {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 5px;
+  font-family: 'Great Vibes', cursive;
+}
+
+@media only screen and (min-width: 992px) {
+  .title {
+    background-position-x: center;
+  }
+
+  .root .title h2 {
+    font-size: 22px;
+  }
+}

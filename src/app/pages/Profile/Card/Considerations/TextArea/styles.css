@@ -1,0 +1,5 @@
+.root textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 5em;
+}

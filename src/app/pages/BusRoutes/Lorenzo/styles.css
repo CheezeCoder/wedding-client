@@ -1,0 +1,28 @@
+.content {
+  padding: 1em;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3em;
+}
+
+.content h2 {
+  color: #009999;
+  font-size: 4em;
+}
+
+.details {
+  color: rgba(0, 0, 0, 0.679);
+  margin-bottom: 2em;
+}
+
+.content img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  .content img {
+    width: 50%;
+  }
+}

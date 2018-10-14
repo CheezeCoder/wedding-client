@@ -1,0 +1,32 @@
+.root {
+  background-image: url(/assets/images/newsfeed.jpg);
+  background-size: cover;
+  background-position-x: 15%;
+  background-position-y: -20%;
+  width: 100vw;
+  height: 50vh;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.root:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=515354ff&noise=000000&density=41&opacity=85);
+  opacity: 0.3;
+  overflow: hidden;
+}
+@media only screen and (min-width: 992px) {
+  .root {
+    background-position-y: 0px;
+    height: 800px;
+  }
+
+  .root:after {
+  }
+}

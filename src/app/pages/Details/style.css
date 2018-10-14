@@ -1,0 +1,11 @@
+.root {
+  /* adjust for navbar position absolute */
+  margin-top: 60px;
+}
+
+@media only screen and (min-width: 992px) {
+  .content {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,23 @@
+.root span {
+  margin-top: 1em;
+}
+
+.root .guests {
+  width: auto;
+}
+
+.root guests::-webkit-input-placeholder {
+  color: #22b8b8;
+}
+
+.root .guests::-moz-placeholder {
+  color: #22b8b8;
+}
+
+.root .guests::-ms-input-placeholder {
+  color: #22b8b8;
+}
+
+.root .guests::placeholder {
+  color: #22b8b8;
+}

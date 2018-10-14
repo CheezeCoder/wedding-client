@@ -14,6 +14,10 @@
   border-top: 0;
 }
 
+.root.dark {
+  background-color: #004747;
+}
+
 .info {
   font-size: 20px;
   padding: 1em;
@@ -39,4 +43,10 @@
 
 .border.alternate {
   background: url(/assets/images/greek-border.png);
+}
+
+@media only screen and (min-width: 992px) {
+  .root.stickybottom {
+    bottom: 0;
+  }
 }

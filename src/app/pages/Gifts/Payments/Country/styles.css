@@ -1,0 +1,21 @@
+.flag {
+  width: 20px;
+  height: auto;
+}
+
+.flagwrapper {
+  margin-left: 0.5em;
+}
+
+.country {
+  font-weight: bold;
+  color: rgb(73, 73, 73);
+}
+
+.payments {
+  list-style: none;
+}
+
+.payments li {
+  margin-top: 0.5em;
+}

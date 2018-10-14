@@ -1,0 +1,13 @@
+.root {
+  margin-top: 5em;
+  padding: 1em;
+  color: rgb(144, 144, 144);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 20em;
+}
+
+.root a {
+  color: #87b6b6;
+}
